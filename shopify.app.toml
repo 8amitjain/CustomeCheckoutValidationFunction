@@ -1,0 +1,25 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "checkout-checks-app"
+client_id = "a8891b6b89c56477db3f053eeab10e07"
+application_url = "https://checkout-app-t.myshopify.com/apps/default-app-home"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_checkouts, write_checkouts, read_discounts, read_products, read_cart_transforms, write_cart_transforms"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://checkout-app-t.myshopify.com/apps/default-app-home/api/auth"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "checkout-app-t.myshopify.com"
